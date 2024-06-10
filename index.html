@@ -18,7 +18,8 @@
                 <input name="calc_input" class="fs-4 text-end col-6 rounded px-5 ms-0 m-2 border border-dark" id="1">
                 <input name="calc_input" class="fs-4 text-end col-6 rounded px-5 ms-0 m-2 border border-dark" id="2">
             </div> -->
-            <input name="calc_input" class="calc_input mt-4 container fs-4 text-end rounded px-5 border border-dark" id="result">
+            <input name="calc_input" type="text" class="calc_input mt-4 container fs-4 text-end px-5" id="input">
+            <input name="calc_output" type="text" class="calc_output container fs-4 text-end px-5" id="result">
         </div>
         
 
@@ -28,31 +29,31 @@
                 <div class="container-fluid col-12 justify-self-start border border-dark rounded py-3 px-0 d-flex flex-column justify-content-center align-items-center">
                     <div class="container row col-12">
                         <button class="container col button_font m-2  rounded-pill" id="clear">AC</button>
-                        <button class="container col button_font m-2  rounded-pill" id="power">^</button>
-                        <button class="container col button_font m-2  rounded-pill" id="mod">%</button>
-                        <button class="col-2 text-center button_font m-2  rounded-pill" id="divide">/</button>
+                        <button class="container col button_font m-2 number rounded-pill" id="power" value="**">^</button>
+                        <button class="container col button_font m-2 number rounded-pill" id="mod" value="%">%</button>
+                        <button class="col-2 text-center button_font m-2 number rounded-pill" id="divide" value="/">/</button>
                     </div>
                     <div class="container row col-12">
-                        <button class="container-fluid col button_font m-2 number  rounded-pill" id="7">7</button>
-                        <button class="container col button_font m-2 number  rounded-pill" id="8">8</button>
-                        <button class="container col button_font m-2 number  rounded-pill" id="9">9</button>
-                        <button class="col-2 text-center button_font m-2 number  rounded-pill" id="mul">x</button>
+                        <button class="container-fluid col button_font m-2 number  rounded-pill" id="7" value="7">7</button>
+                        <button class="container col button_font m-2 number  rounded-pill" id="8" value="8">8</button>
+                        <button class="container col button_font m-2 number  rounded-pill" id="9" value="9">9</button>
+                        <button class="col-2 text-center button_font m-2 number  rounded-pill" id="mul" value="*">x</button>
                     </div>
                     <div class="container row col-12">
-                        <button class="container-fluid col button_font m-2 number  rounded-pill" id="4">4</button>
-                        <button class="container col button_font m-2 number  rounded-pill" id="5">5</button>
-                        <button class="container col button_font m-2 number  rounded-pill" id="6">6</button>
-                        <button class="col-2 text-center button_font m-2 number  rounded-pill" id="subtract">-</button>
+                        <button class="container-fluid col button_font m-2 number  rounded-pill" id="4" value="4">4</button>
+                        <button class="container col button_font m-2 number  rounded-pill" id="5" value="5">5</button>
+                        <button class="container col button_font m-2 number  rounded-pill" id="6" value="6">6</button>
+                        <button class="col-2 text-center button_font m-2 number  rounded-pill" id="subtract" value="-">-</button>
                     </div>
                     <div class="container row col-12">
-                        <button class="container-fluid col button_font m-2 number  rounded-pill" id="1">1</button>
-                        <button class="container col button_font m-2 number  rounded-pill" id="2" >2</button>
-                        <button class="container col button_font m-2 number  rounded-pill" id="3">3</button>
-                        <button class="col-2 text-center button_font m-2  rounded-pill" id="add">+</button>
+                        <button class="container-fluid col button_font m-2 number  rounded-pill" id="1" value="1">1</button>
+                        <button class="container col button_font m-2 number  rounded-pill" id="2"  value="2">2</button>
+                        <button class="container col button_font m-2 number  rounded-pill" id="3" value="3">3</button>
+                        <button class="col-2 text-center button_font m-2 number  rounded-pill" id="add" value="+">+</button>
                     </div>
                     <div class="container row col-12">
-                        <button class="container-fluid col button_font m-2 number  rounded-pill" id="0">0</button>
-                        <button class="container col button_font m-2  rounded-pill" id="point">.</button>
+                        <button class="container-fluid col button_font m-2 number  rounded-pill" id="0" value="0">0</button>
+                        <button class="container col button_font m-2 number  rounded-pill" id="point" value=".">.</button>
                         <button class="container col button_font m-2  rounded-pill " id="del">Del</button>
                         <button class="col-2 text-center button_font m-2  rounded-pill" id="equal">=</button>
                     </div>

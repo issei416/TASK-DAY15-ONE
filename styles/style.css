@@ -28,6 +28,14 @@ input {
     }
 }
 
-.calc_input {
+.calc_input,.calc_output {
     height: 4rem;
+}
+
+.calc_input {
+    border-bottom:none;
+}
+
+.calc_ouput {
+    border-top:none;
 }
