@@ -5,10 +5,20 @@ let clear = document.querySelector("#clear");
 let equal = document.querySelector("#equal");
 let del = document.querySelector("#del");
 
-number.forEach(btn => btn.addEventListener('click',() => {
-    input_field.value += btn.value;
-}));
+input_field.addEventListener('keydown',(e) => {
+    if(Number.isNaN(Number(e.key))){
+        e.preventDefault();
+        window.alert("Only numbers are allowed")
+        return;
+    }
+    else{
+        console.log(e.key);
+    }
+})
 
+number.forEach(btn => btn.addEventListener('click',() => {
+        input_field.value += btn.value;
+}));
 
 clear.addEventListener('click',()=>{
     input_field.value = "";
@@ -20,8 +30,19 @@ del.addEventListener('click',() => {
     input_field.value = curr_input_field.value.substring(0,curr_input_field.value.length-1);
 })
 
-equal.addEventListener('click',()=>{
-    let inexp = input_field.value;
-    let result = new Function(`return (${inexp})`)();
-    output_field.value = result;
+equal.addEventListener('click',(e)=>{
+    let regex =  /^(\d+(\.\d+)?(\s*[-+*/^%]\s*\d+(\.\d+)?)*)(\s*[-+*/^%]\s*)?$/;
+    console.log(regex.test(input_field.value));
+
+    if (regex.test(input_field.value)) {
+        input_field.value = input_field.value.replace("^", "**");
+        console.log(input_field.value);
+        let inexp = input_field.value;
+        let result = new Function(`return (${inexp})`)();
+        output_field.value = result.toFixed(2);
+    }
+    else{
+        e.preventDefault();
+        window.alert("Enter valid expression")
+    }
 })
