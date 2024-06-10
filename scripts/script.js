@@ -11,9 +11,6 @@ input_field.addEventListener('keydown',(e) => {
         window.alert("Only numbers are allowed")
         return;
     }
-    else{
-        console.log(e.key);
-    }
 })
 
 number.forEach(btn => btn.addEventListener('click',() => {
