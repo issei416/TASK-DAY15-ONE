@@ -39,10 +39,10 @@ equal.addEventListener('click',(e)=>{
         console.log(input_field.value);
         let inexp = input_field.value;
         let result = new Function(`return (${inexp})`)();
-        output_field.value = result.toFixed(2);
+        output_field.value = result;
     }
     else{
         e.preventDefault();
-        window.alert("Enter valid expression")
+        window.alert("Enter valid expression");
     }
 })
